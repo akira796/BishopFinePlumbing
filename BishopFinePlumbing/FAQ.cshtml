@@ -1,0 +1,115 @@
+﻿@{
+    Page.Title = "FAQ";
+    Layout = "~/_SiteLayout.cshtml";
+}
+<style>
+    #body{
+       font-size:18px;
+    }
+    #body img{
+        width:100%;
+        max-width:64px;
+    }
+    .faq li {
+        padding: 20px;
+    }
+
+        .faq li.q {
+            background: #4FC2E;
+            font-weight: bold;
+            font-size: 120%;
+            border-bottom: 1px #ddd solid;
+            cursor: pointer;
+        }
+
+        .faq li.a {
+            background: #3BB0D6;
+            display: none;
+            color: #fff;
+        }
+    .rotate {
+        -moz-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+</style>
+<h1 class="textSection" style="font-family:'Palatino Linotype';">FAQ</h1>
+<hr/>
+<ul class="faq">
+    <li class="q">
+        <img src="~/Images/Right-Arrow-PNG-Transparent.png">
+        What is your typical process for working with a new customer?
+    </li>
+    <li class="a">We review the issue then quote price to repair or replace.</li>
+    <li class="q">
+        <img src="~/Images/Right-Arrow-PNG-Transparent.png">
+        What education and/or training do you have that relates to your work?
+    </li>
+    <li class="a">We are licensed in three states, the city of Phoenix lic #26805, the city of Sacramento, CA, the county and city of Columbia, MO. As well as the United States Dept of Labor, and the United Association of Plumbers and Pipe Fitters as a journeyman plumber since 1978. Thus with 35 years of journeyman experience, we are qualified plumbers.</li>
+    <li class="q">
+        <img src="~/Images/Right-Arrow-PNG-Transparent.png">
+        What types of customers have you worked with?
+    </li>
+    <li class="a">Our clients are fine home owners, renters, landlords, remodelers, real estate companies, and commercial businesses</li>
+    <li class="q">
+        <img src="~/Images/Right-Arrow-PNG-Transparent.png">
+        What types of payment do you accept?
+    </li>
+    <li class="a">Visa, Mastercard, Discover, American Express, Debit Cards, Cash, and Check.</li>
+    <li class="q">
+        <img src="~/Images/Right-Arrow-PNG-Transparent.png">
+        Can a leaking water heater be repaired?
+    </li>
+    <li class="a">
+        In general NO. A leaking water heater is a result of a rusted interior tank. Meaning it must be replaced as soon as possible.
+        A small leak can instantly turn into a flood without warning.
+    </li>
+    <li class="q">
+        <img src="~/Images/Right-Arrow-PNG-Transparent.png">
+        Does a water heater need maintenance?
+    </li>
+    <li class="a">
+        Yes. We reccomend flushing the water heater once a year. This is an easy process that only takes about 2 minutes.
+        That will increase your water heaters life span as well as your other plumbing fixtures. At the end of installation we will instruct you on this easy process.
+    </li>
+    <li class="q">
+        <img src="~/Images/Right-Arrow-PNG-Transparent.png">
+        How soon can I get serviced?
+    </li>
+    <li class="a">
+        Usually we can do the job the same day! Calling in the morning is best for same day service!
+    </li>
+</ul>
+
+
+<script>
+    // Accordian Action
+    var action = 'click';
+    var speed = "500";
+
+
+    $(document).ready(function () {
+
+        // Question handler
+        $('li.q').on(action, function () {
+
+            // gets next element
+            // opens .a of selected question
+            $(this).next().slideToggle(speed)
+
+                // selects all other answers and slides up any open answer
+                .siblings('li.a').slideUp();
+
+            // Grab img from clicked question
+            var img = $(this).children('img');
+
+            // remove Rotate class from all images except the active
+            $('img').not(img).removeClass('rotate');
+
+            // toggle rotate class
+            img.toggleClass('rotate');
+
+        });
+
+    });
+</script>

@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83806060-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-83806060-1');
+    </script>
+
+    <meta charset="utf-8" />
+    <title>@Page.Title - Bishop Fine Plumbing</title>
+    <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.10.3.js"></script>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <meta name="viewport" content="width=device-width" />
+</head>
+
+<body>
+    <style>
+        ul.sitemap {
+            display: inline-block;
+        }
+
+        ul.menu {
+            text-align: center;
+        }
+    </style>
+    
+        <section class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                    <a href="~/Default.cshtml">Bishop Fine <span style="color:aqua;">Plumbing</span></a>
+                </div>
+                <nav>
+                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                    <ul class="nav-list">
+                        <li>
+                            <a href="~/Default.cshtml">Home</a>
+                        </li>
+                        <li>
+                            <a href="~/About.cshtml">About</a>
+                        </li>
+                        <li>
+                            <a href="#!">Products &amp; Pricing</a>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a href="~/WaterHeaters.cshtml">Water Heaters</a>
+                                </li>
+                                <li>
+                                    <a href="~/GarbageDisposals.cshtml">Garbage Disposals</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Other</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="~/Contact.cshtml">Contact Now!</a>
+                        </li>
+                        @*<li>
+                            <a href="#!">Previous Work Gallery</a>
+                            <ul class="nav-dropdown">
+                                <li>
+                                    <a href="#!">Water Heaters - Coming Soon</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Garbage Disposals  - Coming Soon</a>
+                                </li>
+                                <li>
+                                    <a href="#!">Other  - Coming Soon</a>
+                                </li>
+                            </ul>
+                        </li>*@
+                        <li>
+                            <a href="~/FAQ.cshtml">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="tel:+16028210001"><img src="~/Images/phoneIcon.png" style="width:32px;"/></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+            <hr/>
+            <p class="textSection" style="font-size:14px; text-align:left;">Bishop Fine Plumbing does not engage in new plumbing construction or accept more then $1000 per job in plumbing repair contracting.
+            Consequently we are not required by Arizona law to be a licensed plumbing contractor.
+            Therefore, to save a significant overhead expense, and pass this cost savings to you the home owner; we are not a licensed Arizona plumbing contractor.
+            Bishop Fine Plumbing is, a legal repair-service plumbing company. Kent is a licensed a Journeyman in three states, the city of Phoenix, AZ lic #26805, the city of Sacramento, CA, the county and city of Columbia, MO.
+            As well as the United States Dept of Labor, and the United Association of Plumbers and Pipe Fitters as a journeyman plumber since 1978.
+            With 35 years of journeyman experience; we are legally able and fully qualified to do any plumbing repair and service for under $1000 per job.
+            <br/><br/>Bishop Fine Plumbing gives a 30 day satisfaction labor warranty on all our repairs. Additionally there will be a manufacturer's warranty on all new plumbing fixtures installed. We fully feel all our customers will agree we are a top tier plumbing service company.
+            <br/><br/>Call Bishop Fine Plumbing Service 602-821-0001. We accept Cash, Visa, Master Card, Discover, American Express</p>
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <ul class="sitemap" style="color:white;">
+
+                    <li>
+                        <a href="/Default.cshtml" style="color:white;">Home</a>
+                    </li>
+                    <li>
+                        <a href="~/About.cshtml" style="color:white;">About</a>
+
+                    </li>
+                    <li>
+                        <a href="~/WaterHeaters.cshtml" style="color:white;">Water Heaters</a>
+                    </li>
+                    <li>
+                        <a href="~/FAQ.cshtml" style="color:white;">FAQ</a>
+                    </li>
+                </ul>
+
+                <ul class="sitemap" style="color:white;">
+                    <li>
+                        <a href="~/Contact.cshtml" style="color:white;">Garbage Disposals</a>
+                    </li>
+                    @*<li>
+
+                        <a href="~/OurReferences.cshtml" style="color:white;">Other</a>
+                    </li>*@
+                    <li>
+                        <a href="~/Contact.cshtml" style="color:white;">Contact Now</a>
+                    </li>
+
+                </ul>
+
+                @*<ul class="sitemap">
+                    <li>
+                        <a href="~/About.cshtml"></a>
+                    </li>
+                    <li>
+
+                        <a href="~/About.cshtml#Wyatt">Wyatt Whitham</a>
+                    </li>
+                    <li>
+                        <a href="~/About.cshtml#Luka">Luka Longin</a>
+                    </li>
+                </ul>*@
+
+            </div>
+        </div>
+        <div class="float-right">
+
+            <p style="color:white;">&copy; @DateTime.Now.Year - Bishop Fine <span style="color:aqua;">Plumbing</span>. </p>
+        </div>
+        <div style="text-align:center;">
+            <img src="~/Images/facebook.png" style="max-width:256px;  max-height:64px;" />
+            <img src="~/Images/ThumbtackLogo.png" style=" max-width:64px; max-height:64px;" />
+            <img src="~/Images/instagram.png" style=" max-width:64px; max-height:64px;" />
+            <img src="~/Images/twitter.png" style=" max-width:64px; max-height:64px;" />
+            @*<br/><span style="color:white;">Design by <a href="http://www.akirawebsolutions.com">AkiraWebSolutions.com</a></span>*@
+        </div>
+
+
+    </footer>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
+
+
+<script>
+@*NAV BAR JS*@
+(function($) { // Begin jQuery
+  $(function() { // DOM ready
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
+</script>
